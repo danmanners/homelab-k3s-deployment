@@ -1,0 +1,8 @@
+---
+groups:
+
+- _plugin: yaml
+  filepath: inventory/control-plane.yaml
+
+- _plugin: yaml
+  filepath: inventory/on-prem-workers.yaml

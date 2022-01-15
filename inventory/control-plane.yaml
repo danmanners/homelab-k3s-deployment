@@ -1,0 +1,16 @@
+groups:
+  - name: control_plane_nodes
+    targets:
+      - name: tpi-k3s-cp-01
+        uri: 10.45.0.35
+      - name: tpi-k3s-cp-02
+        uri: 10.45.0.36
+      - name: tpi-k3s-cp-03
+        uri: 10.45.0.37
+
+config:
+  transport: ssh
+  ssh:
+    user: ubuntu
+    private-key: ~/.ssh/id_rsa
+    host-key-check: false

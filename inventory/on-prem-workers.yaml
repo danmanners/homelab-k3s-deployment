@@ -1,0 +1,53 @@
+groups:
+  # Turing Pi v1 Nodes
+  - name: turing_pi_v1_nodes
+    targets:
+      - name: tpi-k3s-140
+        uri: 10.45.0.40
+      - name: tpi-k3s-141
+        uri: 10.45.0.41
+      - name: tpi-k3s-142
+        uri: 10.45.0.42
+      - name: tpi-k3s-143
+        uri: 10.45.0.43
+      - name: tpi-k3s-144
+        uri: 10.45.0.44
+      - name: tpi-k3s-145
+        uri: 10.45.0.45
+      - name: tpi-k3s-146
+        uri: 10.45.0.46
+  # Proxmox Nodes
+  - name: proxmox_nodes
+    targets:
+    - name: tpi-k3s-038
+      uri: 10.45.0.38
+    - name: tpi-k3s-039
+      uri: 10.45.0.39
+    - name: tpi-k3s-047-rocky.danmanners.io
+      uri: 10.45.0.47
+      config:
+        ssh:
+          user: rocky
+    - name: tpi-k3s-048-al2.danmanners.io
+      uri: 10.45.0.48
+      config:
+        ssh:
+          user: amazon
+  # Turing Pi v2 Nodes
+  - name: turing_pi_v2_nodes
+    targets:
+    # - name: tpiv2-node-1
+    #   uri: 10.45.0.231
+    # - name: tpiv2-node-2
+    #   uri: 10.45.0.232
+    - name: tpiv2-node-3
+      uri: 10.45.0.233
+    # - name: tpiv2-node-4
+    #   uri: 10.45.0.234
+
+config:
+  transport: ssh
+  ssh:
+    user: ubuntu
+    private-key: ~/.ssh/id_rsa
+    host-key-check: false

@@ -1,0 +1,9 @@
+# Directories
+.vscode/
+.modules/
+.resource_types/
+
+# Files
+.DS_Store
+*.log
+*.json
